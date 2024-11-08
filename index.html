@@ -1,47 +1,28 @@
+<!--para abrir o html terá que abrir o DOCTYPE e escolher o 5, que é a 3° opção-->
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
-    <title>_IFSUL</title>
-    <meta charset="UTF-8" />
-    <style type="text/css">
-        body {
-            /*propriedades de cor:*/
-            /*cor de fundo*/
-            background-color: yellow;
-            /*cor da fonte*/
-            color: red;
-            /*propriedades de fontes:*/
-            /*tamanho em pixels*/
-            font-size: 30px;
-            /*fonte genérica cpm serifa*/
-            font-family: serif;
-            /*peso da fonte (negrito)*/
-            font-weight: bold;
-            /*imagem de fundo*/
-            background-image: url("fundo.jpeg");
-        }
-
-        h1 {
-            color: blue;
-            /*propriedades da borda*/
-            border-color: red;
-            /*cor*/
-            border-width: 2px;
-            /*espeessura*/
-            border-style: dotted;
-            /*tipo:dashed, inset, double e solid*/
-            border-radius: 20px;
-            /*canto arredondado*/
-            /* margem externa */
-            margin: 10px;
-            /*margem interna*/
-            padding: 10px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <script src ="logica.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-
+<body>
+    <div class="container">
+    <h1> Conversor de Moedas </h1>
+    <!-- Campo de entrada para o valor em reais (BRL)-->
+     <input type="number" id="valor" placeholder="Digite o valor em BRL">
+     <!--botão para converter-->
+     <button onclick="converter()" >Converter</button>
+     <!--Seletor para escolher a moeda de destino-->
+     <select id="moeda">
+        <option value="USD"> Dólar (USD) </option>
+        <option value="EUR"> Euro (EUR) </option>
+        <option value="GBP"> Libra (GBP) </option>
+     </select>
+     <!--Onde o resultado será exibido-->
+     <div id="resultado" ></div>
+    </div>
+</body>
 </html>
-<!-- Todas as tags suportam o atributo "style" para personalização -->
-<!-- Ex: <tag style= "propriedade: valor;">  -->
-<!-- é bom testar as páginas em vários navegadores  -->
